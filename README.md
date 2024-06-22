@@ -1,3 +1,59 @@
+# Node.js MySQL CRUD Operations
+
+This project demonstrates basic CRUD (Create, Read, Update, Delete) operations using Node.js and MySQL.
+
+## Project Setup
+
+1. **Initialize Node.js Project**
+
+   If you haven't already initialized your project with npm, do so:
+
+   ```bash
+   npm init -y
+
+
+2. Install Dependencies
+   
+   Install required packages: npm install express mysql2
+
+   express: Web framework for Node.js
+   mysql2: MySQL client for Node.js
+
+
+3.Set Up MySQL Database
+   
+   Make sure you have MySQL installed locally or accessible remotely.
+   Create a new database and note down the database name, username, and password.
+
+
+4. Create Configuration File
+   
+   Create a configuration file for database connection. Create a config/db.config.js file and add the following:
+
+   module.exports = {
+  HOST: "localhost",
+  USER: "your_username",
+  PASSWORD: "your_password",
+  DB: "your_database",
+  dialect: "mysql",
+  pool: {
+    max: 5,
+    min: 0,
+    acquire: 30000,
+    idle: 10000
+  }
+};
+
+
+    Replace your_username, your_password, and your_database with your actual MySQL credentials.
+
+4.Libraries Used
+   
+  Express: Web framework for Node.js
+  mysql2: MySQL client for Node.js
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
