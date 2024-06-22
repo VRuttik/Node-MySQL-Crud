@@ -11,12 +11,11 @@ function CreateStudent() {
 
     function handleSubmit(event) {
         event.preventDefault();
-        axios.post('http://localhost:8081/create', {name, email}
+        axios.post('http://localhost:8081/create', {name, email})
             .then(res => {
                 console.log(res);
                 navigate('/')
             }).catch(err => console.log(err));
-        )
     }
 
     return (

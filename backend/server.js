@@ -18,6 +18,29 @@ app.post('/create', (req, res) => {
     })
 })
 
+app.put('/update/id', (req, res) => {
+    const sql = "update student set `Name` = ?, `Email` = ? Where ID = ?";
+    const values = [
+        req.body.name,
+        req.body.email
+    ]
+    const id = req.params.id;
+    db.query(sql, [...values, id], (err, data) => {
+        if(err) return res.json("Error");
+        return res.json(data);
+    })
+})
+
+app.delete('/student/id', (req, res) => {
+    const sql = "DELETE FROM student WHERE ID = ?";
+    const id = req.params.id;
+
+    db.query(sql, [id], (err, data) => {
+        if(err) return res.json("Error");
+        return res.json(data);
+    })
+})
+
 
 const db = mysql.createConnection({
     host: "192.168.30.%",

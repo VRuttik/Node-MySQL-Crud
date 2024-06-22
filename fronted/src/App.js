@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Student from './Student';
 import CreateStudent from './CreateStudent';
+import UpdateStudent from './UpdateStudent';
 
 function App() {
   return (
